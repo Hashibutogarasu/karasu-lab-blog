@@ -14,7 +14,7 @@ const siteMetadata = {
   email: 'karasu@karasu256.com',
   github: 'https://github.com/Hashibutogarasu',
   x: 'https://x.com/Columba_Karasu',
-  facebook: 'https://facebook.com',
+  // facebook: 'https://facebook.com',
   youtube: 'https://www.youtube.com/@crow9605',
   locale: 'ja-JP',
   // set to true if you want a navbar fixed to the top
