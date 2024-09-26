@@ -1,21 +1,70 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
- "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="107.000000pt" height="107.000000pt" viewBox="0 0 107.000000 107.000000"
- preserveAspectRatio="xMidYMid meet">
-<metadata>
-Created by potrace 1.11, written by Peter Selinger 2001-2013
-</metadata>
-<g transform="translate(0.000000,107.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
-<path d="M609 942 c-17 -18 -95 -88 -289 -258 -117 -102 -177 -155 -204 -179
--6 -5 -31 -28 -56 -50 l-45 -39 -1 -144 -1 -143 21 18 c11 10 25 23 31 28 7 6
-46 41 88 79 86 77 86 77 216 196 52 47 103 93 115 103 11 10 50 45 86 77 l65
-59 -1 131 c0 71 -3 132 -5 135 -3 2 -12 -3 -20 -13z"/>
-<path d="M929 857 c-64 -56 -145 -128 -180 -159 -35 -31 -75 -66 -89 -78 -55
--47 -68 -59 -150 -131 l-85 -76 2 -129 c1 -71 2 -135 2 -143 1 -11 5 -10 19 5
-10 10 54 51 98 89 43 39 92 83 109 99 26 24 63 58 189 171 12 11 47 43 77 70
-30 28 70 63 89 79 l35 29 1 138 c1 77 1 139 0 139 0 -1 -53 -47 -117 -103z"/>
-</g>
+<?xml version="1.0" encoding="utf-8" ?>
+<svg baseProfile="tiny" height="512px" version="1.2" viewBox="0,0,512,512" width="512px"
+    xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs />
+    <rect fill="#F8F8F8" height="64" stroke="#F8F8F8" width="64" x="0" y="0" shape-rendering="crispEdges" />
+    <rect fill="#2B2B2B" height="64" stroke="#2B2B2B" width="64" x="64" y="0" shape-rendering="crispEdges" />
+    <rect fill="#7D7D7D" height="64" stroke="#7D7D7D" width="64" x="128" y="0" shape-rendering="crispEdges" />
+    <rect fill="#7E7D7D" height="64" stroke="#7E7D7D" width="64" x="192" y="0" shape-rendering="crispEdges" />
+    <rect fill="#7D7D7D" height="64" stroke="#7D7D7D" width="64" x="256" y="0" shape-rendering="crispEdges" />
+    <rect fill="#7E7D7D" height="64" stroke="#7E7D7D" width="64" x="320" y="0" shape-rendering="crispEdges" />
+    <rect fill="#2B2B2B" height="64" stroke="#2B2B2B" width="64" x="384" y="0" shape-rendering="crispEdges" />
+    <rect fill="#F8F8F8" height="64" stroke="#F8F8F8" width="64" x="448" y="0" shape-rendering="crispEdges" />
+    <rect fill="#828282" height="64" stroke="#828282" width="64" x="0" y="64" shape-rendering="crispEdges" />
+    <rect fill="#767676" height="64" stroke="#767676" width="64" x="64" y="64" shape-rendering="crispEdges" />
+    <rect fill="#797777" height="64" stroke="#797777" width="64" x="128" y="64" shape-rendering="crispEdges" />
+    <rect fill="#2B2B2B" height="64" stroke="#2B2B2B" width="64" x="192" y="64" shape-rendering="crispEdges" />
+    <rect fill="#2B2B2B" height="64" stroke="#2B2B2B" width="64" x="256" y="64" shape-rendering="crispEdges" />
+    <rect fill="#787777" height="64" stroke="#787777" width="64" x="320" y="64" shape-rendering="crispEdges" />
+    <rect fill="#777777" height="64" stroke="#777777" width="64" x="384" y="64" shape-rendering="crispEdges" />
+    <rect fill="#828282" height="64" stroke="#828282" width="64" x="448" y="64" shape-rendering="crispEdges" />
+    <rect fill="#7D7C7C" height="64" stroke="#7D7C7C" width="64" x="0" y="128" shape-rendering="crispEdges" />
+    <rect fill="#727272" height="64" stroke="#727272" width="64" x="64" y="128" shape-rendering="crispEdges" />
+    <rect fill="#717171" height="64" stroke="#717171" width="64" x="128" y="128" shape-rendering="crispEdges" />
+    <rect fill="#747373" height="64" stroke="#747373" width="64" x="192" y="128" shape-rendering="crispEdges" />
+    <rect fill="#747272" height="64" stroke="#747272" width="64" x="256" y="128" shape-rendering="crispEdges" />
+    <rect fill="#727272" height="64" stroke="#727272" width="64" x="320" y="128" shape-rendering="crispEdges" />
+    <rect fill="#717171" height="64" stroke="#717171" width="64" x="384" y="128" shape-rendering="crispEdges" />
+    <rect fill="#7D7D7D" height="64" stroke="#7D7D7D" width="64" x="448" y="128" shape-rendering="crispEdges" />
+    <rect fill="#787777" height="64" stroke="#787777" width="64" x="0" y="192" shape-rendering="crispEdges" />
+    <rect fill="#736C6C" height="64" stroke="#736C6C" width="64" x="64" y="192" shape-rendering="crispEdges" />
+    <rect fill="#6D6767" height="64" stroke="#6D6767" width="64" x="128" y="192" shape-rendering="crispEdges" />
+    <rect fill="#6D6767" height="64" stroke="#6D6767" width="64" x="192" y="192" shape-rendering="crispEdges" />
+    <rect fill="#736C6C" height="64" stroke="#736C6C" width="64" x="256" y="192" shape-rendering="crispEdges" />
+    <rect fill="#6D6767" height="64" stroke="#6D6767" width="64" x="320" y="192" shape-rendering="crispEdges" />
+    <rect fill="#736C6C" height="64" stroke="#736C6C" width="64" x="384" y="192" shape-rendering="crispEdges" />
+    <rect fill="#787777" height="64" stroke="#787777" width="64" x="448" y="192" shape-rendering="crispEdges" />
+    <rect fill="#737272" height="64" stroke="#737272" width="64" x="0" y="256" shape-rendering="crispEdges" />
+    <rect fill="#6E6767" height="64" stroke="#6E6767" width="64" x="64" y="256" shape-rendering="crispEdges" />
+    <rect fill="#484242" height="64" stroke="#484242" width="64" x="128" y="256" shape-rendering="crispEdges" />
+    <rect fill="#686262" height="64" stroke="#686262" width="64" x="192" y="256" shape-rendering="crispEdges" />
+    <rect fill="#6E6767" height="64" stroke="#6E6767" width="64" x="256" y="256" shape-rendering="crispEdges" />
+    <rect fill="#484242" height="64" stroke="#484242" width="64" x="320" y="256" shape-rendering="crispEdges" />
+    <rect fill="#6E6767" height="64" stroke="#6E6767" width="64" x="384" y="256" shape-rendering="crispEdges" />
+    <rect fill="#747373" height="64" stroke="#747373" width="64" x="448" y="256" shape-rendering="crispEdges" />
+    <rect fill="#6F6E6E" height="64" stroke="#6F6E6E" width="64" x="0" y="320" shape-rendering="crispEdges" />
+    <rect fill="#696969" height="64" stroke="#696969" width="64" x="64" y="320" shape-rendering="crispEdges" />
+    <rect fill="#A0C3C0" height="64" stroke="#A0C3C0" width="64" x="128" y="320" shape-rendering="crispEdges" />
+    <rect fill="#FFE9E1" height="64" stroke="#FFE9E1" width="64" x="192" y="320" shape-rendering="crispEdges" />
+    <rect fill="#686161" height="64" stroke="#686161" width="64" x="256" y="320" shape-rendering="crispEdges" />
+    <rect fill="#9BBFBC" height="64" stroke="#9BBFBC" width="64" x="320" y="320" shape-rendering="crispEdges" />
+    <rect fill="#696969" height="64" stroke="#696969" width="64" x="384" y="320" shape-rendering="crispEdges" />
+    <rect fill="#6F6E6E" height="64" stroke="#6F6E6E" width="64" x="448" y="320" shape-rendering="crispEdges" />
+    <rect fill="#6A6969" height="64" stroke="#6A6969" width="64" x="0" y="384" shape-rendering="crispEdges" />
+    <rect fill="#F2F2F2" height="64" stroke="#F2F2F2" width="64" x="64" y="384" shape-rendering="crispEdges" />
+    <rect fill="#9DC1BD" height="64" stroke="#9DC1BD" width="64" x="128" y="384" shape-rendering="crispEdges" />
+    <rect fill="#FFDBCF" height="64" stroke="#FFDBCF" width="64" x="192" y="384" shape-rendering="crispEdges" />
+    <rect fill="#FFDBCF" height="64" stroke="#FFDBCF" width="64" x="256" y="384" shape-rendering="crispEdges" />
+    <rect fill="#9BBEBC" height="64" stroke="#9BBEBC" width="64" x="320" y="384" shape-rendering="crispEdges" />
+    <rect fill="#F2F2F2" height="64" stroke="#F2F2F2" width="64" x="384" y="384" shape-rendering="crispEdges" />
+    <rect fill="#6A6969" height="64" stroke="#6A6969" width="64" x="448" y="384" shape-rendering="crispEdges" />
+    <rect fill="#FFDBCF" height="64" stroke="#FFDBCF" width="64" x="0" y="448" shape-rendering="crispEdges" />
+    <rect fill="#FFE9E1" height="64" stroke="#FFE9E1" width="64" x="64" y="448" shape-rendering="crispEdges" />
+    <rect fill="#FFE9E1" height="64" stroke="#FFE9E1" width="64" x="128" y="448" shape-rendering="crispEdges" />
+    <rect fill="#FFE9E1" height="64" stroke="#FFE9E1" width="64" x="192" y="448" shape-rendering="crispEdges" />
+    <rect fill="#FFE9E1" height="64" stroke="#FFE9E1" width="64" x="256" y="448" shape-rendering="crispEdges" />
+    <rect fill="#FFE9E1" height="64" stroke="#FFE9E1" width="64" x="320" y="448" shape-rendering="crispEdges" />
+    <rect fill="#FFE9E1" height="64" stroke="#FFE9E1" width="64" x="384" y="448" shape-rendering="crispEdges" />
+    <rect fill="#FFDBCF" height="64" stroke="#FFDBCF" width="64" x="448" y="448" shape-rendering="crispEdges" />
 </svg>
