@@ -3,18 +3,19 @@ import { User } from '@prisma/client';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { useSession } from 'next-auth/react';
 import { useState, useEffect } from 'react';
+import { CamelToSnake } from 'snake-camel-types';
 
 
 const supabase = createClientComponentClient();
 
-export const getUser = async <T extends User>(id: any): Promise<T | undefined> => {
+export const getUser = async <T extends CamelToSnake<User>>(id: any): Promise<T | undefined> => {
     const { data } = await supabase.from("users").select().eq("id", id).single();
     if (data) {
         return data as T;
     }
 }
 
-export function useSocialUsersById<T extends User>(id: number): Promise<T | undefined> {
+export function useSocialUsersById<T extends CamelToSnake<User>>(id: number): Promise<T | undefined> {
     const [user, setUser] = useState<T | undefined>();
 
     useEffect(() => {
@@ -31,7 +32,7 @@ export function useSocialUsersById<T extends User>(id: number): Promise<T | unde
     return Promise.resolve(user);
 }
 
-export function useSocialUser<T extends User>(): T | undefined {
+export function useSocialUser<T extends CamelToSnake<User>>(): T | undefined {
     const session = useSession();
     const [user, setUser] = useState<T | undefined>();
 

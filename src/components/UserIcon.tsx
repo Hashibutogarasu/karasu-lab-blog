@@ -4,7 +4,6 @@ import { User } from "@prisma/client";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { CamelToSnake } from "snake-camel-types";
 
 const supabase = createClientComponentClient();
 
@@ -20,7 +19,7 @@ export function UserIcon({ user_id }: { user_id: number | undefined }) {
             }
         });
         getUser(user_id).then((user) => {
-            setDisplayName(user?.display_name ?? undefined);
+            setDisplayName((user as any).display_name);
         });
     }, [user_id]);
 

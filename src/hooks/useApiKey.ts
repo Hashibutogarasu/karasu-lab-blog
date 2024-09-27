@@ -4,7 +4,8 @@
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { useSession } from 'next-auth/react';
 import { useState, useEffect } from 'react';
-import { User, useSocialUser } from './useSocialUser';
+import { useSocialUser } from './useSocialUser';
+import { User } from '@prisma/client';
 
 const supabase = createClientComponentClient();
 
@@ -34,7 +35,7 @@ export function useApiToken(): string | undefined {
     useEffect(() => {
 
         return () => {
-            setApiToken(user?.api_token);
+            setApiToken(user?.api_token ?? undefined);
         }
     }, [user]);
 

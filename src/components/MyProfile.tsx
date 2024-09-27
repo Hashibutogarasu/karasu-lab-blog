@@ -5,9 +5,10 @@ import { getUser } from "@/hooks/useSocialUser";
 import { Avatar, Box, Button, Typography } from "@mui/material";
 import { User } from "@prisma/client";
 import { useEffect, useState } from "react";
+import { CamelToSnake } from "snake-camel-types";
 
 export default function MyProfile({ userId, editable, hide_edit }: { userId: number | undefined, editable: boolean | undefined, hide_edit: boolean | undefined }) {
-    const [user, setUser] = useState<User>();
+    const [user, setUser] = useState<CamelToSnake<User>>();
     const edit = editable ?? false;
     const hide = hide_edit ?? false;
 
@@ -25,7 +26,7 @@ export default function MyProfile({ userId, editable, hide_edit }: { userId: num
             <Box sx={{ my: 2 }} />
             <Typography variant="body1">Name:<LoadingSkeleton>{user?.name}</LoadingSkeleton></Typography>
             <Typography variant="body1">Email:<LoadingSkeleton>{user?.email}</LoadingSkeleton></Typography>
-            <Typography variant="body1">Display Name:<LoadingSkeleton>{user?.display_name}</LoadingSkeleton></Typography>
+            <Typography variant="body1">Display Name:<LoadingSkeleton>{user?.display__name}</LoadingSkeleton></Typography>
             <Box sx={{ my: 2 }} />
 
             {
