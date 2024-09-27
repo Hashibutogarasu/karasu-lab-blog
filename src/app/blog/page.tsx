@@ -8,6 +8,7 @@ import MainContent from '@/components/MainContent';
 import Latest from '@/components/Latest';
 import Footer from '@/components/Footer';
 import { lightTheme } from '@/theme/theme';
+import { PostList } from '@/components/PostList';
 
 export default function Blog() {
   const [mode, setMode] = React.useState<PaletteMode>('light');
@@ -56,7 +57,7 @@ export default function Blog() {
           sx={{ display: 'flex', flexDirection: 'column', my: 16, gap: 4 }}
         >
           <MainContent />
-          <Latest />
+          <PostList />
         </Container>
         <Footer />
       </ThemeProvider>

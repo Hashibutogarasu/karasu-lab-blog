@@ -35,9 +35,6 @@ export default function AppAppBar() {
             <SiteLogo />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
               <StyledButton variant="text" size="small">
-                Blog
-              </StyledButton>
-              <StyledButton variant="text" size="small">
                 Mods
               </StyledButton>
             </Box>

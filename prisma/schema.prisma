@@ -43,18 +43,20 @@ model User {
     id               Int                @id @default(autoincrement())
     isAdmin          Boolean            @default(false) @map("is_admin")
     name             String?
+    display_name     String?            @default(uuid()) @map("display_name") @unique
     email            String?            @unique
     emailVerified    DateTime?          @map("email_verified")
     image            String?
-    createdAt        DateTime           @default(now()) @map(name: "created_at")
-    updatedAt        DateTime           @updatedAt @map(name: "updated_at")
+    createdAt        DateTime           @default(now()) @map("created_at")
+    updatedAt        DateTime           @updatedAt @map("updated_at")
     apiToken         String?            @unique @map("api_token")
     accounts         Account[]
     sessions         Session[]
-    Devide           Device[]
+    Device           Device[]
     MutedApplication MutedApplication[]
     Notification     Notification[]
     Application      Application[]
+    Post             Post[]
 
     @@map(name: "users")
 }
@@ -108,10 +110,24 @@ model Notification {
     devideId  Int      @map("device_id")
     title     String
     content   String
-    createdAt DateTime @default(now()) @map(name: "created_at")
-    updatedAt DateTime @updatedAt @map(name: "updated_at")
+    createdAt DateTime @default(now()) @map("created_at")
+    updatedAt DateTime @updatedAt @map("updated_at")
     devide    Device   @relation(fields: [devideId], references: [id], onDelete: Cascade)
     user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
     @@map("notifications")
+}
+
+model Post {
+    id        Int      @id @default(autoincrement())
+    userId    Int      @map("user_id")
+    title     String
+    content   String
+    createdAt DateTime @default(now()) @map("created_at")
+    updatedAt DateTime @updatedAt @map("updated_at")
+    tags      String[]
+
+    user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+    @@map("posts")
 }

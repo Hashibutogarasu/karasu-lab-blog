@@ -3,10 +3,12 @@ import { useEffect, useState } from "react";
 import { StyledCard } from "./StyledComponents";
 import { Box, Button, Typography } from "@mui/material";
 import { useSocialUser } from "@/hooks/useSocialUser";
+import { CamelToSnake } from "snake-camel-types";
+import { User } from "@prisma/client";
 
 export function DeveloperSettings() {
     const apiToken = useApiToken();
-    const user = useSocialUser();
+    const user = useSocialUser() as any as CamelToSnake<User>;
 
     const [token, setToken] = useState<string | undefined>();
 
