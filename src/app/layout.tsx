@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import AppAppBar from "@/components/AppAppBar";
 import './page.module.css';
 import Footer from "@/components/Footer";
-import { TemplateFrame } from "@/components/TemplateFrame";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import NextAuthProvider from "@/providers/NextAuth";
 
@@ -35,7 +34,7 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <NextAuthProvider>
             <AppAppBar />
-            <TemplateFrame>{children}</TemplateFrame>
+            {children}
             <Footer />
           </NextAuthProvider>
         </AppRouterCacheProvider>
