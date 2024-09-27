@@ -5,6 +5,7 @@ import './page.module.css';
 import Footer from "@/components/Footer";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import NextAuthProvider from "@/providers/NextAuth";
+import { Box } from "@mui/material";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,7 +35,9 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <NextAuthProvider>
             <AppAppBar />
-            {children}
+            <Box sx={{ m: 25 }}>
+              {children}
+            </Box>
             <Footer />
           </NextAuthProvider>
         </AppRouterCacheProvider>
