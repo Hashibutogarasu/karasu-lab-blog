@@ -87,12 +87,12 @@ export default function AppAppBar() {
                   {
                     !session.data?.user ? <>
                       <MenuItem>
-                        <StyledButton color="primary" variant="contained" fullWidth>
+                        <StyledButton variant="outlined" size="large" href="/login">
                           Log in or Sign up
                         </StyledButton>
                       </MenuItem>
                     </> : <MenuItem>
-                      <StyledButton color="primary" variant="outlined" fullWidth>
+                      <StyledButton color="primary" variant="outlined" fullWidth href="/settings/profile">
                         Profile
                       </StyledButton>
                     </MenuItem>
