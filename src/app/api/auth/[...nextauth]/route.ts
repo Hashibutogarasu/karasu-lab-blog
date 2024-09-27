@@ -5,11 +5,10 @@ import GoogleProvider from 'next-auth/providers/google'
 import EmailProvider from 'next-auth/providers/email'
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { PrismaClient } from "@prisma/client";
-import { pages } from 'next/dist/build/templates/app-page';
 
 const prisma = new PrismaClient();
 
-export const authOptions = {
+const authOptions = {
     adapter: PrismaAdapter(prisma),
     secret: process.env.NEXTAUTH_SECRET,
     providers: [
