@@ -1,10 +1,10 @@
 generator client {
-    provider = "prisma-client-js"
+    provider        = "prisma-client-js"
 }
 
 datasource db {
-    provider = "postgresql"
-    url      = env("DATABASE_URL")
+    provider   = "postgresql"
+    url        = env("DATABASE_URL")
 }
 
 model Account {
@@ -43,7 +43,7 @@ model User {
     id               Int                @id @default(autoincrement())
     isAdmin          Boolean            @default(false) @map("is_admin")
     name             String?
-    display_name     String?            @default(uuid()) @map("display_name") @unique
+    display_name     String?            @unique @default(uuid()) @map("display_name")
     email            String?            @unique
     emailVerified    DateTime?          @map("email_verified")
     image            String?
@@ -123,9 +123,11 @@ model Post {
     userId    Int      @map("user_id")
     title     String
     content   String
+    path      String   @default(uuid())
     createdAt DateTime @default(now()) @map("created_at")
     updatedAt DateTime @updatedAt @map("updated_at")
     tags      String[]
+    state     String   @default("draft")
 
     user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 

@@ -15,7 +15,6 @@ export async function POST(req: NextRequest) {
     const { data, error } = await supabase.from("users").select().eq("api_token", api_token).single();
 
     if (data != null || error != null) {
-        console.log("Inserting device");
         const { status, statusText, error } = await supabase.from("devices").insert(device);
 
         const res = NextResponse.json({

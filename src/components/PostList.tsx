@@ -13,6 +13,7 @@ import { useSocialUsersById } from '@/hooks/useSocialUser';
 import { useUserPosts } from '@/hooks/useUserPosts';
 import { UserIcon } from './UserIcon';
 import { CamelToSnake } from 'snake-camel-types';
+import { useRouter } from 'next/navigation';
 
 const StyledTypography = styled(Typography)({
     display: '-webkit-box',
@@ -61,10 +62,16 @@ const TitleTypography = styled(Typography)(({ theme }) => ({
 
 
 export function PostList() {
+    const router = useRouter();
     const posts = useUserPosts();
     const [focusedCardIndex, setFocusedCardIndex] = React.useState<number | null>(
         null,
     );
+
+    const handleClick = (index: number) => {
+        const id = posts[index].path;
+        router.push(`/blog/view/${id}`);
+    }
 
     const handleFocus = (index: number) => {
         setFocusedCardIndex(index);
@@ -80,7 +87,7 @@ export function PostList() {
                 Blog
             </Typography>
             <Grid container spacing={8} columns={12} sx={{ my: 4 }}>
-                {posts.map((article, index) => {
+                {posts.filter((e)=>e.state == "published").map((article, index) => {
                     return (
                         <Grid key={index} size={{ xs: 12, sm: 6 }}>
                             <Box
@@ -105,6 +112,7 @@ export function PostList() {
                                     gutterBottom
                                     variant="h6"
                                     onFocus={() => handleFocus(index)}
+                                    onClick={() => handleClick(index)}
                                     onBlur={handleBlur}
                                     tabIndex={0}
                                     className={focusedCardIndex === index ? 'Mui-focused' : ''}

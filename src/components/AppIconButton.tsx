@@ -6,6 +6,5 @@ import { useSocialUser } from "@/hooks/useSocialUser";
 export function AppIconButton() {
     const user = useSocialUser();
 
-    return <Link href={"/settings/profile"}>
-        <Avatar src={user?.image ?? ""} alt={user?.name ?? ""} /></Link>;
+    return <Avatar src={user?.image ?? ""} alt={user?.name ?? ""} />;
 }

@@ -15,6 +15,7 @@ import { StyledButton, StyledLink, StyledToolbar } from './StyledComponents';
 import { useSession } from 'next-auth/react';
 import { AppIconButton } from './AppIconButton';
 import LoadingSkeleton from './Skeleton';
+import { AccountMenu } from './AccountMenu';
 
 export default function AppAppBar() {
   const session = useSession();
@@ -50,7 +51,9 @@ export default function AppAppBar() {
             <LoadingSkeleton width={40} height={40}>
               {
                 session.data?.user ? (
-                  <AppIconButton />
+                  <>
+                    <AccountMenu />
+                  </>
                 ) : <>
                   <StyledButton variant="outlined" size="large" href="/login">
                     Log in or Sign up

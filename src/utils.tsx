@@ -9,16 +9,13 @@ export async function SignUp({ credentials }: { credentials: { email: string, pa
     const supabase = createClientComponentClient();
 
     await supabase.auth.signUp(credentials).then((response) => {
-        console.log(response);
     });
 }
 
 export async function SignIn({ credentials }: { credentials: { email: string, password: string } }) {
     const supabase = createClientComponentClient();
 
-    console.log(credentials);
     await supabase.auth.signInWithPassword(credentials).then((response) => {
-        console.log(response);
     });
 
     await signIn("email", {

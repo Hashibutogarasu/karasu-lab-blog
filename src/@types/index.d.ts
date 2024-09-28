@@ -24,5 +24,7 @@ declare module '@prisma/client' {
         created_at: Date;
         updated_at: Date;
         tags: string[];
+        path: string;
+        state: 'draft' | 'published';
     }
 }
