@@ -1,16 +1,15 @@
 import { supabase } from "@/utils/supabaseClient";
+import { Post } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: NextRequest) {
-    const userId = req.nextUrl.searchParams.get("userId");
+    const id = req.nextUrl.searchParams.get("id");
 
-    if (userId) {
-        const { data, error } = await supabase.from("posts").select().eq("user_id", userId);
+    if (id) {
+        const post = (await supabase.from("posts").select().eq("id", id).single()).data as Post;
 
-        return NextResponse.json(data ?? [], { status: 200 });
+        return NextResponse.json(post ?? {}, { status: 200 });
     }
 
-    const { data } = await supabase.from("posts").select();
-
-    return NextResponse.json(data ?? [], { status: 200 });
+    return NextResponse.json({}, { status: 200 });
 }
